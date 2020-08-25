@@ -20,7 +20,7 @@ node {
     def resourceGroup = 'myResourceGroup' 
     def webAppName = 'masut365WebApp'
     // login Azure
-    withCredentials([azureServicePrincipal('<mySrvPrincipal>')]) {
+    withCredentials([azureServicePrincipal('1ee22d9e-7917-490c-8239-b749dd5c5d9e')]) {
       sh '''
         az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID
         az account set -s $AZURE_SUBSCRIPTION_ID
